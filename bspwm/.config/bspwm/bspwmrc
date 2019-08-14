@@ -18,8 +18,6 @@ bspc config gapless_monocle true #Default setup uses negative padding, and gaple
 bspc config borderless_monocle  true
 bspc config single_monocle true
 bspc config paddingless_monocle false
-#bspc config ignore_ewmh_focus      true
-#bspc config initial_polarity second_child
 bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true
 ## Honor size hints: do not make windows smaller than they wish to be
@@ -43,7 +41,7 @@ bspc config split_ratio         0.50
 
 #bspc monitor -d i ii iii iv v vi vii viii ix x
 #bspc monitor -d One Two Three Four Five Six Seven Eight Nine Ten
-#bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d I II III IV V VI VII VIII IX X
 #bspc monitor -d • • • • • • • • • •
 #bspc monitor -d I II III IV V VI
 
@@ -55,13 +53,10 @@ bspc rule -a gcolor2 state=floating center=true
 bspc rule -a lxappearance state=floating center=true
 bspc rule -a gmrun state=floating center=true
 bspc rule -a lxterminal state=floating center=true sticky=true
-#bspc rule -a urxvt state=floating center=true
 bspc rule -a viewnior state=floating center=true
 bspc rule -a file-roller state=floating center=true
 bspc rule -a floaterm state=floating center=true
 bspc rule -a spotify state=pseudo_tiled
-#bspc rule -a nautilus state=pseudo_tiled
-#bspc rule -a skype state=pseudo_tiled
 bspc rule -a file-roller state=pseudo_tiled
 bspc rule -a transmission-gtk state=pseudo_tiled
 bspc rule -a conky sticky=on manage=off lower=on
@@ -81,36 +76,6 @@ bspc rule -a wpa_gui state=pseudo_tiled
 bspc rule -a libreoffice state=tiled
 bspc rule -a '*:libreofficedev' state=tiled
 bspc rule -a '*:soffice' state=tiled
-#bspc rule -a firefox desktop=I
-#bspc rule -a calibre desktop=II
-#bspc rule -a geany desktop=II
-#bspc rule -a deluge desktop=III
 bspc rule -a 9menu border=off manage=off
 bspc rule -a tint2 border=off manage=off
-#bspc desktop I --layout monocle
-#bspc desktop II --layout monocle
 
-
-##  Autogap adjusts windowgap automatically according to the number of
-##  windows on the desktop. Using it disables negative window GAP.
-#autogap &
-
-##  This script balances all windows when new one is spawned 
-#euclid_balancer &
-
-##Edge-switcher switches to next workspace when moves moves to the 
-##edge of the monitor (behavior similar to enlightenment)
-#edge-switcher &
-
-###External rules
-##Pseudo automatic mode: always splits focused window when opening new window
-bspc config external_rules_command /usr/bin/pseudo_automatic_mode
-##Adjust new window: splits biggest windows to keep windows about the same size
-#bspc config external_rules_command /usr/bin/adjust-new-window
-
-##Autostart apps
-#Keybindings daemon
-#sxhkd &
-#Source autostartfile. Uncomment this if you use bspwm-git
-#. $HOME/.config/bspwm/autostart
-# limepanel &
