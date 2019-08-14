@@ -68,7 +68,7 @@ rofi.color-active: #EEF4F8, #b48ead, #EEF4F8, #EEF4F8, #93e5cc
 rofi.color-urgent: #EEF4F8, #ebcb8b, #EEF4F8, #EEF4F8, #ebcb8b
 rofi.width: 300
 rofi.lines: 9
-rofi.font: xos4 Terminus 14
+!rofi.font: 'xos4\Terminus 14'
 rofi.modi: run
 rofi.hide-scrollbar: true
 
