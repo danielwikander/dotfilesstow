@@ -9,6 +9,9 @@
     "vim.useSystemClipboard": true,
     "vim.highlightedyank.enable": true,
     "vim.leader": "<Space>",
+    "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false },
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["J"],
