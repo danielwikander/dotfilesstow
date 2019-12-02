@@ -1,5 +1,5 @@
 ﻿# ---- SCRIPTS ----
-alt + shift + Escape
+alt + Escape
     sh ~/.config/scripts/rofisystemmenu.sh
 
 # ---- Window manipulation ----
