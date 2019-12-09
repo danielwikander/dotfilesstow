@@ -32,6 +32,10 @@ fi
 xrdb merge .Xresources &                      # Xresources 
 setxkbmap -option "caps:escape"               # Set caps as esc
 xsetroot -cursor_name left_ptr &              # Set cursor to pointer instead of x
+xset +fp /usr/share/fonts/local &             # Set fonts
+xset +fp /usr/share/fonts/misc &
+xset +fp ~/.fonts &
+xset fp rehash &
 systemctl --user import-environment DISPLAY & # Fix for dunst when not using display manager
 dunst &                                       # Notification daemon
 devmon &                                      # Mount removable media daemon
