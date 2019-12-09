@@ -29,7 +29,7 @@ alt + shift + w
 
 # Toggle floating mode
 alt + w
-	{bspc node -t floating && window-placer $(bspc query -T -d | grep -o '"state":"floating"' | wc -l),bspc node -t tiled}
+	bspc node -t {floating,tiled}
 
 # Toggle fullscreen
 alt + f 
@@ -39,23 +39,23 @@ alt + f
 alt + i
 	bspc node -g sticky
 
-# Cycle windows
+# Cycle between nodes in workspace
 alt + {_,shift + }Tab
-    bspc node -f {next,prev}
+    bspc node -f {next,prev}.local
 
 # Focus node in given direction
 alt + {h,j,k,l}
     bspc node -{west,south,north,east}
-        	
-# Resize windows horizontally
-alt + ctrl : {h,l}
-  INC={-10,+10}; bspc node @east -r $INC || bspc node @west -r $INC
 
-# Resize windows vertically
-alt + ctrl : {j,k}
-  INC={+10,-10}; bspc node @north -r $INC || bspc node @south -r $INC
+# Resize node 
+alt + ctrl + {h,j,k,l}
+	bspwm_resize {west,south,north,east} 50
 
-#
+# Switch to the other monitor
+alt + m
+	bspc monitor -f next
+
+
 # Layout manipulation/desktop level controls
 # ______________    
 
@@ -71,9 +71,8 @@ alt + g
 alt + shift + g
     bspc config -d focused window_gap 0
 
-#
 # Spawn programs
-#
+# ______________    
 
 # Rofi
 alt + d
@@ -82,10 +81,6 @@ alt + d
 # Terminal (urxvt)
 alt + Return
 	urxvt
-
-# Terminal (floating)
-alt + shift + Return
-    {urxvt, bspc rule -a \* -o state=floating && urxvt}
     
 # Pcman filemanager
 alt + e

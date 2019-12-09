@@ -7,3 +7,4 @@ My dotfiles, installable using [stow](http://www.gnu.org/software/stow/ "GNU Sto
 3. To install the ranger config for example, simply type: `stow ranger`
 
 To install the needed packages with pacman, use `pacman -S --needed - < packagestoinstall`
+Make sure you have permission to run the /scripts/

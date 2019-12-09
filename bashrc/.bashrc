@@ -35,6 +35,10 @@ function parse_git_dirty {
 	fi
 }
 
+# Set prompt
 export PS1="\[\e[37m\]\W\[\e[m\]\[\e[32m\]\`parse_git_branch\`\[\e[m\]\[\e[92m\] →\[\e[m\] "
+
+# Add scripts to path
+export PATH="$HOME/.dotfiles/scripts/.config/scripts:$PATH"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
