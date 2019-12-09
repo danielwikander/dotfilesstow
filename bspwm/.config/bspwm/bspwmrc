@@ -1,18 +1,11 @@
 #! /bin/sh
-GAP=0
-PANEL_HEIGHT=20
+PANEL_HEIGHT=25
 BORDERSIZE=3
-export GAP
 export PANEL_HEIGHT
 export BORDERSIZE
 export _JAVA_AWT_WM_NONREPARENTING=1 # Fix java apps
 
-# This creates negative padding equal to window GAP so that gaps are shown only between windows and not on desktop edges.
-bspc config window_gap $GAP
-bspc config top_padding $GAP 
-bspc config left_padding $GAP
-bspc config right_padding $GAP
-bspc config bottom_padding $GAP
+bspc config top_padding $PANEL_HEIGHT 
 
 # Various settings
 bspc config gapless_monocle true # Default setup uses negative padding, and gapless monocle looks really weird like that

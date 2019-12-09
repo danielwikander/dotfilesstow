@@ -62,13 +62,18 @@ Xcursor.size:                     0
 ! --------------------------------------------------------------------------
 
 rofi.color-enabled: true
-rofi.color-window: #EEF4F8, #EEF4F8, #EEF4F8
-rofi.color-normal: #EEF4F8, #38383A, #EEF4F8, #EEF4F8, #D2A4A8
-rofi.color-active: #EEF4F8, #b48ead, #EEF4F8, #EEF4F8, #93e5cc
-rofi.color-urgent: #EEF4F8, #ebcb8b, #EEF4F8, #EEF4F8, #ebcb8b
+!                  bg       border   separator
+rofi.color-window: #262626, #DEE1E6, #262626
+!                  bg       fg       bgalt    hlbg     hlfg
+rofi.color-normal: #262626, #FFFFFF, #262626, #757575, #FFFFFF
+rofi.color-active: #262626, #b48ead, #262626, #757575, #93e5cc
+rofi.color-urgent: #262626, #ebcb8b, #262626, #757575, #ebcb8b
 rofi.width: 300
-rofi.lines: 9
-!rofi.font: 'xos4\Terminus 14'
+rofi.bw: 3
+rofi.lines: 10
+rofi.location: 1
+rofi.yoffset: 25
+rofi.font: Terminus 11
 rofi.modi: run
 rofi.hide-scrollbar: true
 
