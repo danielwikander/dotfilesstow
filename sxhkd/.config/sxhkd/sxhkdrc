@@ -55,7 +55,6 @@ alt + ctrl + {h,j,k,l}
 alt + m
 	bspc monitor -f next
 
-
 # Layout manipulation/desktop level controls
 # ______________    
 
