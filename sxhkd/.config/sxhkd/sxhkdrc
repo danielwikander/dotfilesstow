@@ -2,6 +2,9 @@
 alt + Escape
     sh ~/.config/scripts/rofisystemmenu.sh
 
+alt + F1
+    sh ~/.config/scripts/keybindsinfo.sh
+
 # ---- Window manipulation ----
 
 # Close window
@@ -12,110 +15,87 @@ alt + shift + q
 alt + super + shift + q
 	bspc  node -k
 
-# focus the node in the given direction
+# Focus the node in the given direction
 alt + {_,shift + }{h,j,k,l}
     bspc node -{f,s} {west,south,north,east}
 
-# focus or send to the given desktop
+# Focus or send to the given desktop
 alt + {_,shift + }{1-9,0}
     bspc {desktop -f,node -d} '^{1-9,10}'
 
-# Toggle tiling mode of window
+# Swap node with largest node
 alt + shift + w
 	bspc node -t {pseudo_tiled,tiled}
 
+# Toggle floating mode
 alt + w
 	{bspc node -t floating && window-placer $(bspc query -T -d | grep -o '"state":"floating"' | wc -l),bspc node -t tiled}
 
-# Force all windows of the desktop to tile
-#super + shift + w
-#	bspcp tile
-# Force all windows of the desktop to float and arrange them
-#super + w
-#	bspcp float
-	
 # Toggle fullscreen
 alt + f 
 	bspc node -t {fullscreen,tiled}	
 
-# Try to keep size and position of the selected window
-super + o
-	bspc node -g private
-
 # Make window sticky
-super + i
+alt + i
 	bspc node -g sticky
 
-# Lock a window from closing
-super + Escape
-	bspc node -g locked 
-
-# go (Shift=move) to desktop (and focus the monitor that the desktop is located on. Bspwm style)
-#alt + {_,shift + }{1-9,0}
-#    bspc {desktop -f,node -d} ^{1-9,10}
-
-# cycle windows
+# Cycle windows
 alt + {_,shift + }Tab
     bspc node -f {next,prev}
-	
-# promote window 
-alt + space
-    bspc node -s biggest
 
-# focus node in given direction
-alt +  {h,j,k,l}
+# Focus node in given direction
+alt + {h,j,k,l}
     bspc node -{west,south,north,east}
         	
-#resize windows
+# Resize windows horizontally
+alt + ctrl : {h,l}
+  INC={-10,+10}; bspc node @east -r $INC || bspc node @west -r $INC
 
-alt + ctrl + {h,j,k,l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
-	
-alt + shift + ctrl + {h,j,k,l}
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
-
-alt + ctrl + {Left,Down,Up,Right}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
-
-alt + shift + ctrl + {Left,Down,Up,Right}
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+# Resize windows vertically
+alt + ctrl : {j,k}
+  INC={+10,-10}; bspc node @north -r $INC || bspc node @south -r $INC
 
 #
 # Layout manipulation/desktop level controls
 # ______________    
 
-# Toggle monocle mode
-super + f 
-	bspc desktop -l next
+# Swap node with biggest node on workspace
+alt + shift + f
+   bspc node -s biggest.local
 
-# Mirror and flip leaves of tree
-alt + {comma,period}
-	bspc node @/ -F {horizontal,vertical}
-
-# Change window gap
+# Increase window gap
 alt + g
-	bspc config -d focused window_gap {$gap,$(($gap+$gap)),$(($gap+$gap+$gap))}
+    bspc config -d focused window_gap $((`bspc config -d focused window_gap` + 5 ))
+
+# Reset window gap
+alt + shift + g
+    bspc config -d focused window_gap 0
 
 #
-# spawn programs
+# Spawn programs
 #
 
-# run applications
-alt + shift + d
-	dmenu_recent -fn 'xos4 Terminus:size=15' -i -l 14 -w 600 -y $PANEL_HEIGHT
-
+# Rofi
 alt + d
 	rofi -show
 
+# Terminal (urxvt)
 alt + Return
 	urxvt
-    		
+
+# Terminal (floating)
+alt + shift + Return
+    {urxvt, bspc rule -a \* -o state=floating && urxvt}
+    
+# Pcman filemanager
 alt + e
 	pcmanfm
 
+# Ranger
 alt + shift + e
 	urxvt -e ranger
 
+# Print screen
 alt + Print
 	scrot '%Y-%m-%d_%H-%M-%S.png' -e 'mv $f ~/Pictures/Screenshots/'
 	
@@ -138,9 +118,6 @@ XF86MonBrightnessDown
 XF86MonBrightnessUp
     light -A 5
  
-XF86Sleep
-	systemctl suspend
-
-# make sxhkd reload its configuration files:
-super + shift + Escape
+# Make sxhkd reload its configuration files
+alt + shift + F12
 	pkill -USR1 -x sxhkd

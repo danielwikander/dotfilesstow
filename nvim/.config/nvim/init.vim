@@ -68,11 +68,24 @@ colorscheme gruvbox "
 nnoremap <space> <Nop>
 map <space> <leader>
 
+" Map J, K +5 -5 lines 
+noremap J 5j
+noremap K 5k
+
 " Move lines up or down
 nmap <leader>k :m .-2<CR>==
 nmap <leader>j :m .+1<CR>==
 vmap <leader>k :m-2<CR>gv=gv
 vmap <leader>j :m'>+<CR>gv=gv
+
+"Tab to switch to next open buffer
+nnoremap <Tab> :bnext<cr>
+
+"Shift + Tab to switch to previous open buffer
+nnoremap <S-Tab> :bprevious<cr>
+
+"leader key twice to cycle between last two open buffers
+nnoremap <leader><leader> <c-^>
 
 " Switch between buffers
 nmap <silent> <leader>ä :bnext<CR>
@@ -137,7 +150,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Use K for show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> <leader>K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if &filetype == 'vim'
