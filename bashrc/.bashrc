@@ -41,4 +41,9 @@ export PS1="\[\e[37m\]\W\[\e[m\]\[\e[32m\]\`parse_git_branch\`\[\e[m\]\[\e[92m\]
 # Add scripts to path
 export PATH="$HOME/.dotfiles/scripts/.config/scripts:$PATH"
 
+# NeoVim as default editor
+VISUAL=nvim;
+export VISUAL EDITOR=nvim; 
+export EDITOR
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

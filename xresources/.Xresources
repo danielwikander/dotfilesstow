@@ -65,9 +65,9 @@ rofi.color-enabled: true
 !                  bg       border   separator
 rofi.color-window: #262626, #262626, #262626
 !                  bg       fg       bgalt    hlbg     hlfg
-rofi.color-normal: #262626, #FFFFFF, #262626, #757575, #FFFFFF
-rofi.color-active: #262626, #b48ead, #262626, #757575, #93e5cc
-rofi.color-urgent: #262626, #ebcb8b, #262626, #757575, #ebcb8b
+rofi.color-normal: #262626, #FFFFFF, #262626, #313131, #d88e8a
+rofi.color-active: #262626, #b48ead, #262626, #313131, #93e5cc
+rofi.color-urgent: #262626, #ebcb8b, #262626, #313131, #ebcb8b
 rofi.width: 300
 rofi.bw: 3
 rofi.lines: 10
