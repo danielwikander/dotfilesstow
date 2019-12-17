@@ -63,7 +63,7 @@ Xcursor.size:                     0
 
 rofi.color-enabled: true
 !                  bg       border   separator
-rofi.color-window: #262626, #DEE1E6, #262626
+rofi.color-window: #262626, #262626, #262626
 !                  bg       fg       bgalt    hlbg     hlfg
 rofi.color-normal: #262626, #FFFFFF, #262626, #757575, #FFFFFF
 rofi.color-active: #262626, #b48ead, #262626, #757575, #93e5cc
@@ -71,8 +71,8 @@ rofi.color-urgent: #262626, #ebcb8b, #262626, #757575, #ebcb8b
 rofi.width: 300
 rofi.bw: 3
 rofi.lines: 10
-rofi.location: 1
-rofi.yoffset: 25
+!rofi.location: 1
+!rofi.yoffset: 25
 rofi.font: Terminus 11
 rofi.modi: run
 rofi.hide-scrollbar: true
