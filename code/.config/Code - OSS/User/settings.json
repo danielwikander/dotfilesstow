@@ -1,17 +1,13 @@
 {
-    "editor.minimap.enabled": false,
-    "breadcrumbs.enabled": false,
-    "window.menuBarVisibility": "toggle",
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "workbench.startupEditor": "newUntitledFile",
+    "editor.insertSpaces": true,
     // Vim
     "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": false,
     "vim.highlightedyank.enable": true,
     "vim.leader": "<Space>",
-    "vim.handleKeys": {
-    "<C-a>": false,
-    "<C-f>": false },
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["J"],
@@ -20,16 +16,77 @@
         {
             "before": ["K"],
             "after": ["5", "k"]
-        }
-    ],
-    "vim.visualModeKeyBindings": [
-        {
-            "before": ["J"],
-            "after": ["5", "j"]
         },
         {
-            "before": ["K"],
-            "after": ["5", "k"]
-        }
+            "before": ["leader", "d"],
+            "commands": ["editor.action.goToDeclaration"]
+        },
+        {
+            "before": ["leader", "D"],
+            "commands": ["editor.action.previewDeclaration"],
+        },
+        {
+            "before": ["leader", "g"],
+            "commands": ["workbench.action.toggleZenMode"],
+        },
+        {
+            "before": ["leader", "t"],
+            "commands": ["workbench.action.terminal.toggleTerminal"]
+        },
+        {
+            "before": ["leader", "Q"],
+            "commands": ["workbench.action.closeActiveEditor"]
+        },
+        {
+            "before": ["tab"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["shift+tab"],
+            "commands": ["editor.action.outdentLines"]
+        },
+        {
+            "before": ["leader", "w"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        // Navigate workbench
+        {
+            "before": ["leader", "H"],
+            "commands": ["workbench.action.navigateLeft"]
+        },
+        {
+            "before": ["leader", "L"],
+            "commands": ["workbench.action.navigateRight"]
+        },
+        {
+            "before": ["leader", "K"],
+            "commands": ["workbench.action.navigateUp"]
+        },
+        {
+            "before": ["leader", "J"],
+            "commands": ["workbench.action.navigateDown"]
+        },
+        // Navigate tabs 
+        {
+            "before": ["leader", "j"],
+            "commands": ["workbench.action.previousEditor"],
+            "when": "!terminalFocus"
+        },
+        {
+            "before": ["leader", "k"],
+            "commands": ["workbench.action.nextEditor"],
+            "when": "!terminalFocus"
+        },
+
+        ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<tab>"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["shift+tab"],
+            "commands": ["editor.action.outdentLines"]
+        },
     ],
 }
