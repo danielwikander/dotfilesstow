@@ -1,11 +1,14 @@
 #! /bin/sh
 PANEL_HEIGHT=25
 BORDERSIZE=3
+GAP=0
 export PANEL_HEIGHT
 export BORDERSIZE
+export GAP
 export _JAVA_AWT_WM_NONREPARENTING=1 # Fix java apps
 
 bspc config top_padding $PANEL_HEIGHT 
+bspc config window_gap  $GAP
 
 # Various settings
 bspc config gapless_monocle true # Default setup uses negative padding, and gapless monocle looks really weird like that
