@@ -89,4 +89,8 @@
             "commands": ["editor.action.outdentLines"]
         },
     ],
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "window.menuBarVisibility": "toggle",
+    "editor.fontSize": 16,
 }
