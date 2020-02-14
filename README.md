@@ -23,6 +23,6 @@ __Uninstall individual config:__
 
 __Install packages:__
 
-Install the configs packages with pacman: 
 `pacman -S --needed - < packagestoinstall`
+
 Make sure you have permission to run the /scripts/
