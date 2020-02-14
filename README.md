@@ -1,22 +1,28 @@
 # dotfiles :open_file_folder:
 My dotfiles, installable using [stow](http://www.gnu.org/software/stow/ "GNU Stow").
 
-## Install all configs
+__Install all configs:__
+
 `make install`
 
-## Update all configs 
+__Update all configs:__ 
+
 `make update`
 
-## Uninstall all configs
+ __Uninstall all configs:__
+ 
 `make uninstall`
 
-### Install individual config
+__Install individual config:__
+
 `stow <configname>`
 
-### Uninstall individual config
+__Uninstall individual config:__
+
 `stow -D <configname>`
 
-## Install packages
+__Install packages:__
+
 Install the configs packages with pacman: 
 `pacman -S --needed - < packagestoinstall`
 Make sure you have permission to run the /scripts/
