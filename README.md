@@ -1,10 +1,22 @@
 # dotfiles :open_file_folder:
 My dotfiles, installable using [stow](http://www.gnu.org/software/stow/ "GNU Stow").
 
-### Install
-1. Make sure you have [stow](http://www.gnu.org/software/stow/ "GNU Stow") installed.
-2. Make sure you don't have an existing config in place.
-3. To install the ranger config for example, simply type: `stow ranger`
+## Install all configs
+`make install`
 
-To install the needed packages with pacman, use `pacman -S --needed - < packagestoinstall`
+## Update all configs 
+`make update`
+
+## Uninstall all configs
+`make uninstall`
+
+### Install individual config
+`stow <configname>`
+
+### Uninstall individual config
+`stow -D <configname>`
+
+## Install packages
+Install the configs packages with pacman: 
+`pacman -S --needed - < packagestoinstall`
 Make sure you have permission to run the /scripts/
