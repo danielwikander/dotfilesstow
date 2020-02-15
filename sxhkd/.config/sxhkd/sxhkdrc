@@ -42,7 +42,7 @@ alt + {h,j,k,l}
 
 # Resize node 
 alt + ctrl + {h,j,k,l}
-	bspwm_resize.sh {west,south,north,east} 50
+	~/.config/scripts/bspwm_resize.sh {west,south,north,east} 50
 
 # Switch to the other monitor
 alt + m
