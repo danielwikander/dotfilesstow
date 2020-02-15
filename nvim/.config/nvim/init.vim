@@ -48,6 +48,7 @@ set shada="NONE"
 set number          " Linenumbers
 "set relativenumber  " Relative linenumbers 
 syntax enable       " Syntax highlighting
+set mouse=a
 set wildmenu        " Visual autocomplete for command menu
 set showmatch       " Hightlight matching { } 
 set clipboard=unnamedplus " Sets the clipboard to system clipboard

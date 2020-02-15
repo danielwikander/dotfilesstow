@@ -40,6 +40,7 @@ systemctl --user import-environment DISPLAY & # Fix for dunst when not using dis
 dunst &                                       # Notification daemon
 devmon &                                      # Mount removable media daemon
 sxhkd &                                       # Keybind daemon
+urxvtd -q -f -o &                             # Urxvt terminal daemon
 if [ -f "$backgroundpic" ]; then              # Set backgroundpic
     feh --bg-fill "$backgroundpic" &
 fi
