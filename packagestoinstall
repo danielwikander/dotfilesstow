@@ -1,5 +1,6 @@
 arandr
 bspwm
+bash
 code
 compton
 dunst
@@ -7,11 +8,9 @@ feh
 firefox
 gcolor2
 grub
-kitty
 libnotify
 neofetch
 neovim
-npm
 open-vm-tools
 pcmanfm
 polybar
@@ -19,7 +18,6 @@ ranger
 rofi
 rxvt-unicode
 scrot
-st
 stow
 sxhkd
 terminus-font
@@ -27,7 +25,6 @@ ttf-inconsolata
 ttf-linux-libertine
 udevil
 vim
-virtualbox-guest-utils
 xf86-input-evdev
 xf86-input-keyboard
 xf86-input-mouse
@@ -85,6 +82,4 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
-xterm
 yay
-zsh
