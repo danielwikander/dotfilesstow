@@ -70,9 +70,9 @@ alt + shift + g
 alt + d
 	rofi -show
 
-# Terminal (urxvt)
+# Terminal (kitty)
 alt + Return
-	urxvt
+	kitty
     
 # Pcman filemanager
 alt + e
@@ -80,7 +80,7 @@ alt + e
 
 # Ranger
 alt + shift + e
-	urxvt -e ranger
+	kitty ranger
 
 # Print screen (saves to ~/Pictures/Screenshots)
 alt + Print

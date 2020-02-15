@@ -36,7 +36,7 @@ function parse_git_dirty {
 }
 
 # Set prompt
-export PS1="\[\e[37m\]\W\[\e[m\]\[\e[32m\]\`parse_git_branch\`\[\e[m\]\[\e[92m\] →\[\e[m\] "
+export PS1="\[\e[37m\]\W\[\e[m\]\[\e[92m\]\`parse_git_branch\`\[\e[m\]\[\e[91m\] →\[\e[m\] "
 
 # Add scripts to path
 export PATH="$HOME/.config/scripts:$PATH"
@@ -46,3 +46,4 @@ export VISUAL='nvim'
 export EDITOR='nvim' 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+source <(kitty + complete setup bash)
