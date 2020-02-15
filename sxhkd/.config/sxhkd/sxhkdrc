@@ -72,7 +72,7 @@ alt + d
 
 # Terminal (kitty)
 alt + Return
-	kitty
+	kitty -1
     
 # Pcman filemanager
 alt + e
@@ -80,7 +80,7 @@ alt + e
 
 # Ranger
 alt + shift + e
-	kitty ranger
+	kitty -1 ranger
 
 # Print screen (saves to ~/Pictures/Screenshots)
 alt + Print
