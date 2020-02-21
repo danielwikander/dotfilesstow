@@ -45,4 +45,10 @@ export PATH="$HOME/.config/scripts:$PATH"
 export VISUAL='nvim'
 export EDITOR='nvim' 
 
+# Set fzf settings
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --ignore-case -g "!{node_modules,.git}"'
+export FZF_DEFAULT_OPTS='-i' 
+#export FZF_CTRL_T_OPTS='-i --height 90% --reverse --preview "head -85 {}"'
+export FZF_CTRL_T_OPTS="-i --height 80% --reverse --preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -100'"
+export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

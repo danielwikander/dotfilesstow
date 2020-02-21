@@ -1,7 +1,7 @@
 ! --   --
-!   XTF
+!   XFT
 ! --   --
-Xft.dpi:       96
+!Xft.dpi:       96
 Xft.antialias: true
 Xft.hinting:   true
 Xft.rgba:      rgb
@@ -81,6 +81,11 @@ rofi.lines: 10
 rofi.font: Terminus 11
 rofi.modi: run
 rofi.hide-scrollbar: true
+rofi.kb-accept-custom: 
+rofi.kb-remove-to-eol: 
+rofi.kb-accept-entry: Return,Control+Return
+rofi.kb-row-up: Control+k,Up
+rofi.kb-row-down: Control+j,Down
 
 ! --     --
 !   URXVT

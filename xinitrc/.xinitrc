@@ -44,7 +44,7 @@ urxvtd -q -f -o &                             # Urxvt terminal daemon
 if [ -f "$backgroundpic" ]; then              # Set backgroundpic
     feh --bg-fill "$backgroundpic" &
 fi
-picom -b &                                    # Compositor
+# picom -b &                                    # Compositor
 polybar top &                                 # Bar
 exec bspwm                                    # Windowmanager
 
