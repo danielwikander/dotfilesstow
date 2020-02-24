@@ -1,6 +1,6 @@
 [bar/top]
-monitor = VGA-1
-monitor-fallback = eDP-1
+monitor = 
+monitor-fallback = 
 width = 100%
 height = 25
 
