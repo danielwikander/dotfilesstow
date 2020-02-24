@@ -1,4 +1,5 @@
 {
+    "editor.rulers": [120],
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "workbench.startupEditor": "newUntitledFile",
@@ -8,6 +9,9 @@
     "vim.useCtrlKeys": false,
     "vim.highlightedyank.enable": true,
     "vim.leader": "<Space>",
+    "vim.handleKeys": {
+        "<C-r>": true
+     },
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["J"],
@@ -93,4 +97,6 @@
     "breadcrumbs.enabled": false,
     "window.menuBarVisibility": "toggle",
     "editor.fontSize": 16,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "window.zoomLevel": 0,
 }
