@@ -1,25 +1,27 @@
 .DEFAULT_GOAL:=install
 
-PACKAGES=$(sort $(dir $(wildcard */)))
+CONFIGS=$(sort $(dir $(wildcard */)))
+RED='\033[0;31m'
+GREEN='\033[1;32m'
+NOCOLOR='\033[0m'
 
 .PHONY: install
 install: installcfgs installpkgs
 
 .PHONY: installcfgs
 installcfgs:
-	sudo pacman -S --needed stow 
-	stow -t ~ $(PACKAGES)
-	sudo chmod 777 ~/.config/scripts/*
-	@echo " -> Installed all configs."
+	@sudo pacman -Sq --needed stow 
+	@stow -t ~ $(CONFIGS)
+	@sudo chmod 777 ~/.config/scripts/*
+	@echo -e ${GREEN}' -> Installed all configs.'${NOCOLOR}
 
 .PHONY: uninstall
 uninstall:
-	stow -Dt ~ $(PACKAGES)
-	@echo " -> Uninstalled all configs."
+	@stow -Dt ~ $(CONFIGS)
+	@echo -e ${GREEN'}' -> Uninstalled all configs.'${NOCOLOR}
 
 .PHONY: update
 update: pull install
-	@echo " -> Updated configs."
 
 .PHONY: pull
 pull:
@@ -27,5 +29,5 @@ pull:
 
 .PHONY: installpkgs
 installpkgs:
-	sudo pacman -S --needed - < packages
-	@echo " -> Installed all packages."
+	@sudo pacman -Sq --needed - < packages
+	@echo -e ${GREEN}' -> Installed all packages.'${NOCOLOR}
