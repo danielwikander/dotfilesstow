@@ -22,7 +22,7 @@ font-3 = FontAwesome:size=10;0
 
 modules-left = bspwm player-cmus
 modules-center = date
-modules-right = wireless-network wired-network volume battery0 battery1
+modules-right = wireless-network wired-network pulseaudio battery0 battery1
 
 [bar/bottom]
 monitor = eDP-1
@@ -277,44 +277,48 @@ interval = 3.0
 label-connected = %local_ip%
 label-disconnected-foreground = #66
 
-[module/volume]
-type = internal/volume
+[module/pulseaudio]
+type = internal/pulseaudio
 
-label-volume = v %percentage%%
-label-muted = m %{F#949494}%percentage%%
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
 
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = true
 
-[module/powermenu]
-type = custom/menu
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 5
 
-format-padding = 5
+; Available tags:
+;   <label-volume> (default)
+;   <ramp-volume>
+;   <bar-volume>
+format-volume = <label-volume>
 
-label-open = 
-label-close = 
+; Available tags:
+;   <label-muted> (default)
+;   <ramp-volume>
+;   <bar-volume>
+format-muted = <label-muted>
 
-menu-0-0 = Terminate WM
-menu-0-0-foreground = #fba922
-menu-0-0-exec = bspc quit -1
-menu-0-1 = Reboot
-menu-0-1-foreground = #fba922
-menu-0-1-exec = menu_open-1
-menu-0-2 = Power off
-menu-0-2-foreground = #fba922
-menu-0-2-exec = menu_open-2
+; Available tokens:
+;   %percentage% (default)
+;   %decibels% (unreleased)
+label-volume = vol %percentage%%
+label-volume-foreground = #DEE1E6
 
-menu-1-0 = Cancel
-menu-1-0-foreground = #fba922
-menu-1-0-exec = menu_open-0
-menu-1-1 = Reboot
-menu-1-1-foreground = #fba922
-menu-1-1-exec = sudo reboot
+; Available tokens:
+;   %percentage% (default)
+;   %decibels% (unreleased)
+label-muted = m %percentage%%
+label-muted-foreground = #757575
 
-menu-2-0 = Power off
-menu-2-0-foreground = #fba922
-menu-2-0-exec = sudo poweroff
-menu-2-1 = Cancel
-menu-2-1-foreground = #fba922
-menu-2-1-exec = menu_open-0
+; Right and Middle click (unreleased)
+click-right = pavucontrol &
+; click-middle =
 
 [module/clock]
 type = internal/date
