@@ -1,2 +1,3 @@
 /code/*
 !/code/.config/Code\ -\ OSS/User/settings.json
+/nvim/.config/nvim/.netrwhist
