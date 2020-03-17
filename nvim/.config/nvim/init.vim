@@ -21,6 +21,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'Shougo/echodoc.vim'
+Plug 'tridactyl/vim-tridactyl'
 call plug#end()
 
 " == GOYO AND LIMELIGHT == "

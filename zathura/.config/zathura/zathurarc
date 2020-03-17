@@ -1,1 +1,2 @@
 set default-bg "#262626"
+set selection-clipboard clipboard
