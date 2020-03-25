@@ -6,11 +6,12 @@
     "editor.insertSpaces": true,
     // Vim
     "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": false,
+    "vim.useCtrlKeys": true,
     "vim.highlightedyank.enable": true,
     "vim.leader": "<Space>",
     "vim.handleKeys": {
-        "<C-r>": true
+        "<C-s>": false,
+        "<C-f>": false,
      },
     "vim.normalModeKeyBindingsNonRecursive": [
         {
