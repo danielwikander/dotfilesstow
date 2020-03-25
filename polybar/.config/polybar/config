@@ -127,7 +127,6 @@ ws-icon-default =
 
 format = <label-state> <label-mode>
 
-
 label-focused = %icon%
 label-focused-font = 1 
 label-focused-padding = 1

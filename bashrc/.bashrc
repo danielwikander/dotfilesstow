@@ -23,13 +23,13 @@ function parse_git_branch() {
 	fi
 }
 
-# get current status of git repo. return "!" if dirty
+# get current status of git repo. return "*" if dirty
 function parse_git_dirty {
 	status=`git status 2>&1 | tee`
 	dirty=`echo -n "${status}" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?"`
 	bits=''
 	if [ "${dirty}" == "0" ]; then
-		echo "!"
+		echo "*"
 	else
 		echo ""
 	fi
