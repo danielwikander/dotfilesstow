@@ -108,4 +108,7 @@
     "editor.fontSize": 16,
     "latex-workshop.view.pdf.viewer": "tab",
     "window.zoomLevel": 0,
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.clean.subfolder.enabled": true,
+    "latex-workshop.latex.rootFile.useSubFile": false,
 }
