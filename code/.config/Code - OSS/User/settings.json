@@ -31,18 +31,6 @@
             "commands": ["editor.action.previewDeclaration"],
         },
         {
-            "before": ["leader", "g"],
-            "commands": ["workbench.action.toggleZenMode"],
-        },
-        {
-            "before": ["leader", "t"],
-            "commands": ["workbench.action.terminal.toggleTerminal"]
-        },
-        {
-            "before": ["leader", "Q"],
-            "commands": ["workbench.action.closeActiveEditor"]
-        },
-        {
             "before": ["tab"],
             "commands": ["editor.action.indentLines"]
         },
@@ -51,25 +39,34 @@
             "commands": ["editor.action.outdentLines"]
         },
         {
-            "before": ["leader", "w"],
+            "before": ["leader", "e"],
             "commands": ["workbench.action.toggleSidebarVisibility"]
         },
-        // Navigate workbench
+        // Rename things
         {
-            "before": ["ctrl+h"],
-            "commands": ["workbench.action.navigateLeft"]
+            "before": ["<leader>", "r"],
+            "commands": [ "editor.action.rename" ]
+        },
+        // Window stuff
+        {
+            "before": ["<leader>", "w"],
+            "commands": [ "workbench.action.splitEditor" ]
         },
         {
-            "before": ["ctrl+l"],
-            "commands": ["workbench.action.navigateRight"]
+            "before": ["<leader>", "f"],
+            "commands": [ "editor.action.quickFix" ]
         },
         {
-            "before": ["ctrl+k"],
-            "commands": ["workbench.action.navigateUp"]
+            "before": ["<leader>", "x"],
+            "commands": [ "workbench.action.closeActiveEditor" ]
         },
         {
-            "before": ["ctrl+j"],
-            "commands": ["workbench.action.navigateDown"]
+            "before": ["leader", "g"],
+            "commands": ["workbench.action.toggleZenMode"],
+        },
+        {
+            "before": ["leader", "q"],
+            "commands": ["workbench.action.closeActiveEditor"]
         },
         // Navigate tabs 
         {
