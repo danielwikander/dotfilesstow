@@ -1,6 +1,3 @@
-" bovine3dom's dogfood
-
-
 " WARNING: This file defines and runs a command called fixamo_quiet. If you
 " also have a malicious addon that operates on `<all_urls>` installed this
 " will allow it to steal your firefox account credentials!

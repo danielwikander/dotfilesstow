@@ -56,33 +56,32 @@
         },
         // Navigate workbench
         {
-            "before": ["leader", "H"],
+            "before": ["ctrl+h"],
             "commands": ["workbench.action.navigateLeft"]
         },
         {
-            "before": ["leader", "L"],
+            "before": ["ctrl+l"],
             "commands": ["workbench.action.navigateRight"]
         },
         {
-            "before": ["leader", "K"],
+            "before": ["ctrl+k"],
             "commands": ["workbench.action.navigateUp"]
         },
         {
-            "before": ["leader", "J"],
+            "before": ["ctrl+j"],
             "commands": ["workbench.action.navigateDown"]
         },
         // Navigate tabs 
         {
-            "before": ["leader", "j"],
+            "before": ["leader", "J"],
             "commands": ["workbench.action.previousEditor"],
             "when": "!terminalFocus"
         },
         {
-            "before": ["leader", "k"],
+            "before": ["leader", "K"],
             "commands": ["workbench.action.nextEditor"],
             "when": "!terminalFocus"
         },
-
         ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {

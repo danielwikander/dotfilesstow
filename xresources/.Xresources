@@ -63,30 +63,6 @@ XTerm*selectToClipboard: true
 Xcursor.theme: xcursor-breeze-snow
 Xcursor.size:  0
 
-! --    --
-!   ROFI 
-! --    --
-rofi.color-enabled: true
-!                  bg       border   separator
-rofi.color-window: #262626, #262626, #262626
-
-!                  bg       fg       bgalt    hlbg     hlfg
-rofi.color-normal: #262626, #FFFFFF, #262626, #313131, #d88e8a
-rofi.color-active: #262626, #b48ead, #262626, #313131, #93e5cc
-rofi.color-urgent: #262626, #ebcb8b, #262626, #313131, #ebcb8b
-
-rofi.width: 300
-rofi.bw: 3
-rofi.lines: 10
-rofi.font: Terminus 11
-rofi.modi: run
-rofi.hide-scrollbar: true
-rofi.kb-accept-custom: 
-rofi.kb-remove-to-eol: 
-rofi.kb-accept-entry: Return,Control+Return
-rofi.kb-row-up: Control+k,Up
-rofi.kb-row-down: Control+j,Down
-
 ! --     --
 !   URXVT
 ! --     --
