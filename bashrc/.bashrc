@@ -45,6 +45,9 @@ export PATH="$HOME/.config/scripts:$PATH"
 export VISUAL='nvim'
 export EDITOR='nvim' 
 
+# Autocomplete ignore case
+bind 'set completion-ignore-case on'
+
 # Set fzf settings
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --ignore-case -g "!{node_modules,.git}"'
 export FZF_DEFAULT_OPTS='-i' 
