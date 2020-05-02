@@ -47,4 +47,5 @@ bspc rule -a google-chrome-stable private=on
 bspc rule -a chromium private=on
 bspc rule -a firefox private=on
 bspc rule -a wpa_gui state=pseudo_tiled
+bspc rule -a Zathura state=tiled
 

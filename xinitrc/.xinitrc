@@ -3,7 +3,8 @@ userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
-backgroundpic=~/.config/currentwallpaper.* 
+backgroundpicjpg=~/.config/currentwallpaper.jpg 
+backgroundpicpng=~/.config/currentwallpaper.png
 
 # Merge in defaults and keymaps
 if [ -f $sysresources ]; then
@@ -42,8 +43,10 @@ dunst &                                       # Notification daemon
 devmon &                                      # Mount removable media daemon
 sxhkd &                                       # Keybind daemon
 urxvtd -q -f -o &                             # Urxvt terminal daemon
-if [ -f "$backgroundpic" ]; then              # Set backgroundpic
-    feh --bg-fill --no-fehbg "$backgroundpic" &
+if [ -f "$backgroundpicjpg" ]; then           # Set backgroundpic
+    feh --bg-fill --no-fehbg "$backgroundpicjpg" &
+elif [ -f "$backgroundpicpng" ]; then        
+    feh --bg-fill --no-fehbg "$backgroundpicpng" &
 fi
 # picom -b &                                    # Compositor
 polybar top &                                 # Bar
