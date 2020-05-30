@@ -91,13 +91,13 @@ alt + Print
 #
 
 XF86AudioRaiseVolume
-	volume up
+    pactl -- set-sink-volume 0 +10%
 
 XF86AudioLowerVolume
-	volume down
+    pactl -- set-sink-volume 0 -10%
 
 XF86AudioMute
-	volume mute
+    pactl set-sink-mute 0 toggle
 	
 XF86MonBrightnessDown
     light -U 5 
