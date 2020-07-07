@@ -38,6 +38,7 @@ xset +fp /usr/share/fonts/local &             # Set fonts
 xset +fp /usr/share/fonts/misc &
 xset +fp ~/.fonts &
 xset fp rehash &
+export _JAVA_AWT_WM_NONREPARENTING=1          # Fix for IntelliJ
 systemctl --user import-environment DISPLAY & # Fix for dunst when not using display manager
 dunst &                                       # Notification daemon
 devmon &                                      # Mount removable media daemon
