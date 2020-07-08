@@ -1,17 +1,11 @@
 configuration {
 	modi: "run";
-	width: 300;
-	lines: 10;
 	font: "Terminus 11";
-	bw: 3;
 	hide-scrollbar: true;
-	color-normal: "#262626, #FFFFFF, #262626, #313131, #d88e8a";
-	color-urgent: "#262626, #ebcb8b, #262626, #313131, #ebcb8b";
-	color-active: "#262626, #b48ead, #262626, #313131, #93e5cc";
-	color-window: "#262626, #262626, #262626";
 	kb-remove-to-eol: "";
 	kb-accept-entry: "Return,Control+Return";
 	kb-accept-custom: "";
 	kb-row-up: "Control+k,Up";
 	kb-row-down: "Control+j,Down";
+    theme: "theme.rasi";
 }
