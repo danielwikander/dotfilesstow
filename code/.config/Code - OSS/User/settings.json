@@ -5,6 +5,7 @@
     "workbench.startupEditor": "newUntitledFile",
     "editor.insertSpaces": true,
     // Vim
+    "keyboard.dispatch": "keyCode", // Workaround for Caps -> Esc to work
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
     "vim.highlightedyank.enable": true,

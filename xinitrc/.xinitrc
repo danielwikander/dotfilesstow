@@ -48,7 +48,7 @@ if [ -f "$backgroundpicjpg" ]; then           # Set backgroundpic
 elif [ -f "$backgroundpicpng" ]; then        
     feh --bg-fill --no-fehbg "$backgroundpicpng" &
 fi
-# picom -b &                                    # Compositor
+picom -b &                                    # Compositor
 polybar top &                                 # Bar
 exec bspwm                                    # Windowmanager
 
