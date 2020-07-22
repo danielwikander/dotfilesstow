@@ -1,3 +1,4 @@
+alacritty
 arandr
 bash
 bspwm
@@ -11,6 +12,7 @@ highlight
 libnotify
 neofetch
 neovim
+nnn
 open-vm-tools
 pcmanfm
 polybar
@@ -34,3 +36,5 @@ w3m
 xorg-server
 xorg-xinit
 yay
+zathura
+zathura-pdf-mupdf

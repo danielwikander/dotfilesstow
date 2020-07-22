@@ -1,0 +1,45 @@
+colors:
+  bright:
+    black: '#777777'
+    blue: '#b3d1ff'
+    cyan: '#B1F7FF'
+    green: '#C6FFC8'
+    magenta: '#fabdf0'
+    red: '#ffbbb2'
+    white: '#ffffff'
+    yellow: '#F7FFAC'
+  normal:
+    black: '#4e4e4e'
+    blue: '#8FA8D0'
+    cyan: '#95D2D7'
+    green: '#A4F0AB'
+    magenta: '#BC8DB5'
+    red: '#a9635d'
+    white: '#cfcfcf'
+    yellow: '#E5ED9C'
+  primary:
+    background: '#262626'
+    foreground: '#d8d8d8'
+
+font:
+  bold:
+    family: Terminus
+    style: Bold
+  italic:
+    family: Terminus
+    style: Bold Italic
+  normal:
+    family: Terminus
+    style: Regular
+  size: 11.0
+
+window: 
+  padding:
+    x: 4
+    y: 4
+
+selection:
+  save_to_clipboard: true
+
+
+
